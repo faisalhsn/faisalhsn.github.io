@@ -1,0 +1,126 @@
+html {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+  color: #e0e0e0;
+  background-color: #121212;
+}
+
+body {
+  margin: 0;
+  padding: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #121212;
+  color: #e0e0e0;
+  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  margin: 2rem 0 1rem;
+  color: #fff;
+}
+
+h1 { font-size: 2.25rem; }
+h2 { font-size: 1.75rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+h5 { font-size: 1rem; }
+h6 { font-size: 0.875rem; color: #bbb; }
+
+a {
+  color: #82c7ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul, ol {
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+  color: #ccc;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin: 1rem 0;
+  color: #ddd;
+}
+
+.warning {
+  border-left: 4px solid red;
+  background: #220000; 
+  color: #ffcccc;
+  padding: 1em; margin: 1em 0;
+}
+
+blockquote {
+  margin: 1.5rem 0;
+  padding-left: 1rem;
+  border-left: 4px solid #444;
+  color: #999;
+  font-style: italic;
+  background-color: #1e1e1e;
+  border-radius: 3px;
+}
+
+pre, code {
+  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  background-color: #1e1e1e;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  color: #a9d1ff;
+}
+
+pre {
+  padding: 1rem;
+  overflow: auto;
+  border: 1px solid #333;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  color: #ddd;
+}
+
+th, td {
+  border: 1px solid #444;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+th {
+  background-color: #222;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  filter: brightness(0.9);
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #444;
+  margin: 2rem 0;
+}
+
+footer {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid #333;
+  font-size: 0.875rem;
+  color: #666;
+}

@@ -1,0 +1,42 @@
+---
+layout: default
+title: Home
+---
+
+<h1>Hello, friend!</h1>
+<p>I am nshfm aka Faisal and this is my webpage.</p>
+<ul>
+<li>me
+    <ul>
+      <li><a href="mailto:mfhsn@protonmail.com" target="_blank" >email</a></li>
+      <li><a href="https://github.com/{{ site.git_usr }}">github</a></li>
+      <li><a href="/a/l/">links</a></li>
+      <li><a href="/a/rec/">uses</a></li>
+      <li><a href="/a/ab/">about</a></li>
+    </ul>
+</li>
+<br>
+<li>
+  rants
+  <ul>
+    {% for post in site.posts limit:10 %}
+    <li>
+      <small>{{ post.date | date: "%d-%m-%Y" }} </small>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+      <p>{{ post.description }} <a href="{{ post.url }}"> Read &rarr;</a></p>
+    </li>
+    {% endfor %}
+    <li><a href="/a/ar">Archive &raquo;</a></li>
+  </ul>
+</li>
+<br>
+<li>
+  projects
+  <ul>
+    <li>
+      <a href="{{ site.git_repo }}sddm-wired-theme">sddm-wired-theme</a>
+      <p>A super minimal theme for sddm login manager designed with single window manager in mind. Not a serious project but this is something.</p>
+    </li>
+  </ul>
+</li>
+</ul>
