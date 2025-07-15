@@ -1,7 +1,8 @@
 permalink: /p/:title/
+author: nshfm
+email: mfhsn@protonmail.com
 title: nshfm
 description: serially experimenting.
 git_usr: nshfm
 git_repo: https://github.com/nshfm/
-
-  
+favicon: "/logo.png"

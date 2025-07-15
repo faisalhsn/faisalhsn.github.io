@@ -4,7 +4,7 @@ title: Home
 ---
 
 <h1>Hello, friend!</h1>
-<p>I am nshfm aka Faisal and this is my webpage.</p>
+<p>I am <strong>nshfm</strong> aka Faisal and this is my webpage.</p>
 <ul>
 <li>me
     <ul>
@@ -17,7 +17,7 @@ title: Home
 </li>
 <br>
 <li>
-  rants
+  posts
   <ul>
     {% for post in site.posts limit:10 %}
     <li>
@@ -27,6 +27,7 @@ title: Home
     </li>
     {% endfor %}
     <li><a href="/a/ar">Archive &raquo;</a></li>
+        <li><a href="/feed.xml" target="_blank">RSS</a></li>
   </ul>
 </li>
 <br>
