@@ -2,7 +2,21 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta property="og:image" content="{{ site.favicon | relative_url }}">
+
+
+  <link rel="icon" type="image/png" href="{{ site.logo }}"> 
+  <link rel="apple-touch-icon" href="{{ site.logo }}"> 
+  <meta property="og:title" content="{{ page.title | default: site.title }}">
+  <meta property="og:description" content="{{ page.description | default: site.description | strip_html | strip_newlines | truncatewords: 30 }}">
+
+  {% assign og_image = page.image | default: site.logo %} 
+  <meta property="og:image" content="{{ site.url }}{{ og_image }}">
+
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+  <meta property="og:site_name" content="{{ site.title }}">
+
+
   <title>
     {%- if page.title -%}
     {{ page.title }} | {{ site.title }} 
@@ -10,6 +24,6 @@
       {{ site.title }}
     {%- endif -%}
   </title>
-  <link rel="shortcut icon" type="image/x-icon" href="{{ site.favicon | relative_url }}" />
+  <link rel="shortcut icon" type="image/x-icon" href="{{ site.logo | relative_url }}" />
 	  <link rel="stylesheet" href="/css/style.css">
 </head>
