@@ -1,42 +1,31 @@
 ---
-layout: default
-title: Home
+layout: none
+permalink: /
 ---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="/assets/css/homepage.css">
+</head>
 
-<h1>Welcome!</h1>
-<p>I am faisalhsn aka Faisal and this is my webpage.</p>
-<ul>
-<li>me
-    <ul>
-      <li><a href="mailto:mfhsn@protonmail.com" target="_blank" >email</a></li>
-      <li><a href="{{ site.git_repo }}">github</a></li>
-      <li><a href="/a/rec/">uses</a></li>
-      <li><a href="/a/l/">links</a></li>
-    </ul>
-</li>
-<br>
-<li>
-  posts
-  <ul>
-    {% for post in site.posts limit:10 %}
-    <li>
-      <small>{{ post.date | date: "%d-%m-%Y" }} </small>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-      <p>{{ post.description }} <a href="{{ post.url }}"> Read &rarr;</a></p>
-    </li>
-    {% endfor %}
-    <li><a href="/a/ar">Archive &raquo;</a></li>
-        <li><a href="/feed.xml" target="_blank">RSS</a></li>
-  </ul>
-</li>
-<br>
-<li>
-  projects
-  <ul>
-    <li>
-      <a href="{{ site.git_repo }}sddm-wired-theme">sddm-wired-theme</a>
-      <p>A super minimal theme for sddm login manager designed with single window manager in mind. Not a serious project but this is something.</p>
-    </li>
-  </ul>
-</li>
-</ul>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="{{ '/a/ab/' | relative_url }}">About</a></li>
+                      <li><a href="{{ '/a/ar/' | relative_url }}">Rants</a></li>
+                      <li><a href="{{ '/a/sk/' | relative_url }}">Sketches</a></li>
+                    <li><a href="{{ '/a/pt/' | relative_url }}">Photographs</a></li>
+                    <li><a href="{{ '/a/rec/' | relative_url }}">Uses</a></li>
+                    <li><a href="{{ '/a/l/' | relative_url }}">Links</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+</body>
+</html>
