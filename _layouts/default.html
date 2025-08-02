@@ -29,15 +29,29 @@
 </head>
 
 
-  <body a="{{ site.theme_config.appearance | default: "auto" }}">
+  <body a="{{ site.theme_config.appearance | default: "auto" }}" id="top">
     <main class="page-content" aria-label="Content">
+      <div style="margin-bottom: 20px; margin-top: 10px; text-align: left;">
+        <a href="{{ '/' | relative_url }}" style="
+            display: inline-block;
+            padding: 8px 15px;
+            margin-left: 10px;
+            color: #82c7ff;
+            text-decoration: underline;
+            border-radius: 5px;
+            border: 1px solid #444;
+            font-size: 0.9em;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        ">&larr; home</a>
+    </div>
       <div class="w">
         {{ content }}
       </div>
     </main>
     <footer style="text-align: center; margin-top: 20px;">
-      <div class="wrapper"><a href="{{ site.url }}">{{ site.url | replace: "https://", "" }}</a>
-      </div>
+      <div class="back-to-top"> <a href="#top">Go to Top</a>
+    </div>
   </footer>
   </body>
 </html>

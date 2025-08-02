@@ -1,26 +1,110 @@
 ---
 layout: default
-title: Photographs
+title: Gallery
 ---
-<body>
-    <div id="app-container" class="main-content-wrapper">
-        <div class="page-title-block">
-            <h1>Photographs</h1>
-        </div>
-        
-        <div class="art-grid">
-            <div class="art-grid-item">
-                <img src="/assets/img/stormy.jpg">
-                <p>Pre Storm | Home</p>
+
+<header><h1>Gallery</h1></header>
+
+    <div id="gallery-container" class="main-content-wrapper">
+
+        <input type="radio" name="tabs" id="tab1" class="tab-input" checked>
+        <input type="radio" name="tabs" id="tab2" class="tab-input">
+
+        <nav class="tabs">
+            <label for="tab1" class="nav-link">Photographs</label>
+            <label for="tab2" class="nav-link">Sketches</label>
+        </nav>
+
+        <section id="photographs-content" class="tab-content" data-content="photographs">
+
+
+            <div class="art-grid">
+                <div class="art-grid-item">
+                    <img src="/assets/img/stormy.jpg" alt="Pre Storm">
+                    <p>Pre Storm | Home</p>
+                </div>
+                <div class="art-grid-item">
+                    <img src="/assets/img/bg.jpg" alt="BG">
+                    <p>BG | Home</p>
+                </div>
+                <div class="art-grid-item">
+                    <img src="/assets/img/tree.jpg" alt="Banyan Tree">
+                    <p>Banyan</p>
+                </div>
             </div>
-            <div class="art-grid-item">
-                <img src="/assets/img/bg.jpg">
-                <p>BG | Home</p>
+        </section>
+
+        <section id="sketches-content" class="tab-content" data-content="sketches">
+
+
+            <input type="checkbox" id="sensitiveToggle" class="sensitive-toggle-input">
+
+            <label for="sensitiveToggle" class="toggle-button">
+                <span class="show-text">Show nudity</span>
+                <span class="hide-text">Hide nudity</span>
+            </label>
+
+            <div class="art-grid">
+                <div class="art-grid-item">
+                    <img src="/assets/img/link.png" alt="Link in knight armor">
+                    <p>Link in knight armor | concept | Breath of the wild</p>
+                </div>
+                <div class="art-grid-item">
+                    <img src="/assets/img/knight.png" alt="Zweihander">
+                    <p>Zweihander | Dark Souls</p>
+                </div>
+                <div class="art-grid-item">
+                    <img src="/assets/img/kf2.png" alt="Fire keeper KF2">
+                    <p>Fire keeper | Dark Souls</p>
+                </div>
+                <div class="art-grid-item">
+                    <img src="/assets/img/fk.png" alt="Fire keeper FK">
+                    <p>Fire keeper | Dark Souls</p>
+                </div>
+                <div class="art-grid-item sensitive-content">
+                    <img src="/assets/img/her4.png" alt=>
+                    <p></p>
+                    </div>
+                <div class="art-grid-item sensitive-content">
+                    <img src="/assets/img/her3.png" alt=>
+                    <p></p>
+                    </div>
+                  <div class="art-grid-item sensitive-content">
+                    <img src="/assets/img/her2.png" alt=>
+                    <p></p>
+                    </div>
+                    <div class="art-grid-item sensitive-content">
+                    <img src="/assets/img/headless.png" alt=>
+                    <p></p>
+                    </div>
+                <div class="art-grid-item">
+                    <img src="/assets/img/nature.png" 
+                    >
+                    <p>Nature</p>
+                </div>
+                
+                <div class="art-grid-item sensitive-content">
+                    <img src="/assets/img/standing.png" alt=>
+                    <p></p>
+                </div>
+                <div class="art-grid-item sensitive-content">
+                    <img src="/assets/img/her.png" alt=>
+                    <p></p>
+                </div>
+                <div class="art-grid-item">
+                    <img src="/assets/img/head.png" alt="Head sketch">
+                    <p></p>
+                </div>
+                <div class="art-grid-item">
+                    <img src="/assets/img/sun.png" alt="Sunshine drawing">
+                    <p>Sunshine</p>
+                </div>
+                <div class="art-grid-item">
+                    <img src="/assets/img/ball.gif" alt="ball">
+                    <p></p>
+                </div>
             </div>
-            <div class="art-grid-item">
-                <img src="/assets/img/tree.jpg">
-                <p>Banyan</p>
-            </div>
+        </section>
     </div>
 </body>
 </html>

@@ -168,6 +168,7 @@ footer {
   box-shadow: none;
   box-sizing: border-box;
   overflow: hidden;
+  border: 1px solid #333;
 }
 
 .art-grid-item img {
@@ -189,4 +190,126 @@ footer {
   font-size: 0.9rem;
   line-height: 1.4;
   font-weight: 400;
+}
+
+/* --- Pure CSS Tabs --- */
+.tabs {
+    display: flex;
+    margin-bottom: 1px;
+    justify-content: center;
+    border-bottom: 1px solid #444;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.tabs label {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #121212;
+    border: 1px solid #444;
+    border-bottom: none;
+    border-radius: 5px 5px 0 0;
+    margin-right: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    color: #e0e0e0;
+}
+
+.tabs label:hover {
+    background-color: #333;
+}
+
+.tab-content {
+    display: none;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin-top: 0;
+}
+
+.tab-input {
+    display: none;
+}
+
+#tab1:checked ~ .tab-content[data-content="photographs"],
+#tab2:checked ~ .tab-content[data-content="sketches"] {
+    display: block;
+}
+
+#tab1:checked ~ .tabs label[for="tab1"],
+#tab2:checked ~ .tabs label[for="tab2"] {
+    background-color: #333;
+    border-bottom: 1px solid #121212;
+    color: #fff;
+    font-weight: bold;
+}
+
+.tab-content .art-grid {
+    padding: 20px 10px;
+}
+
+
+.sensitive-toggle-input {
+    display: none;
+}
+
+
+.toggle-button {
+    background-color: #555; 
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: monospace;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+    display: block;
+    width: fit-content;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+
+#sensitiveToggle:checked ~ .toggle-button {
+    background-color: #333;
+    color: #fff; 
+    border: 1px solid #666; 
+}
+
+.toggle-button .hide-text {
+    display: none;
+}
+.sensitive-content {
+    display: none;
+}
+#sensitiveToggle:checked ~ .art-grid .sensitive-content {
+    display: block;
+}
+
+#sensitiveToggle:checked ~ .toggle-button .show-text {
+    display: none;
+}
+#sensitiveToggle:checked ~ .toggle-button .hide-text {
+    display: inline;
+}
+
+.back-to-top {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 1rem;
+}
+
+.back-to-top a {
+    color: #82c7ff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #1e1e1e;
+    display: inline-block;
+}
+
+.back-to-top a:hover {
+    background-color: #2a2a2a;
+    text-decoration: underline;
 }
